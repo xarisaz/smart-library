@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Smart Library",
+  "version": "0.3.4",
+  "identifier": "gr.smartlibrary.desktop",
+  "build": {
+    "frontendDist": "../frontend"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "Smart Library",
+        "width": 1440,
+        "height": 900,
+        "minWidth": 1120,
+        "minHeight": 700,
+        "center": true,
+        "resizable": true,
+        "decorations": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' asset: data: blob:; media-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; frame-src 'self' data: blob:; worker-src 'self' blob:"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "shortDescription": "Privacy-first local document organizer for Windows and Linux",
+    "longDescription": "Smart Library indexes, previews and classifies local documents without modifying the originals. Gmail attachment import uses read-only IMAP."
+  }
+}
